@@ -1,14 +1,14 @@
 namespace AppHotel.Views;
 
-public partial class ContratacaoHospedagem : ContentPage
+public partial class Sobre : ContentPage
 {
-	public ContratacaoHospedagem()
+	public Sobre()
 	{
 		InitializeComponent();
 	}
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        App.Current.MainPage = new Sobre();
+		App.Current.MainPage = new ContratacaoHospedagem();
     }
 }

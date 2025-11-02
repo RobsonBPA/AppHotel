@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.Sobre"
+             Title="Sobre">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
+        <Frame>
+            <VerticalStackLayout>
+                <!-- Título -->
+                <Label Text="Sobre"
+                       FontSize="50"
+                       TextColor="{StaticResource Primary}"
+                       FontFamily="Lexend-SemiBold"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"/>
+
+                <!-- Desenvolvedor -->
+                <Label Text="Desenvolvedor:"
+                       TextColor="{StaticResource Primary}"
+                       HorizontalTextAlignment="Center"
+                       FontFamily="Lexend-SemiBold"/>
+                <Label Text=" Robson Bassanezi Pasetto Aparecido"
+                       HorizontalTextAlignment="Center"/>
+
+                <!-- Data do Desenvolvimento -->
+                <Label Text="Data do Desenvolvimento:"
+                       TextColor="{StaticResource Primary}"
+                       HorizontalTextAlignment="Center"
+                       FontFamily="Lexend-SemiBold"/>
+                
+                <Label Text=" 02/11/2025"
+                       HorizontalTextAlignment="Center"/>
+
+                <Button Text="Voltar" Clicked="Button_Clicked"
+                        Margin="5"/>
+            </VerticalStackLayout>
+
+            
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

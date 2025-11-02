@@ -11,21 +11,21 @@
                FontFamily="Lexend-Regular"
                FontSize="50"
                TextColor="{StaticResource Primary}"/>
-        
+
         <Frame Padding="10">
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
-                    
+
                     <!-- Adultos -->
                     <Label Grid.Row="0" Grid.Column="0"
                            Text="Adultos:"/>
-                    
+
                     <Label Grid.Row="0" Grid.Column="1"
                            TextColor="{StaticResource Primary}"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_adultos}"/>
-                    
+
                     <Stepper Grid.Row="0" Grid.Column="2"
                              x:Name="stp_adultos"
                              Minimum="1" Maximum="10" Value="1"
@@ -61,7 +61,7 @@
                             <DatePicker x:Name="dtpck_checkin"
                                         Format="dd/MM/yyyy"/>
                         </HorizontalStackLayout>
-                        
+
                         <!-- Check-out -->
                         <HorizontalStackLayout>
                             <Label Text="Check-out:"/>
@@ -71,9 +71,12 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar"/>
+                <Button Text="Avançar" Margin="5"/>
+                <Button Text="Sobre" Clicked="Button_Clicked"
+                        Margin="5"/>
+
             </VerticalStackLayout>
         </Frame>
-        
+
     </VerticalStackLayout>
 </ContentPage>

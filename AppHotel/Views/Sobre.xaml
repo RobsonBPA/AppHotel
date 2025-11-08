@@ -11,8 +11,9 @@
                        FontSize="50"
                        TextColor="{StaticResource Primary}"
                        FontFamily="Lexend-SemiBold"
-                        VerticalOptions="Center" 
-                        HorizontalOptions="Center"/>
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center"
+                       Margin="0,0,0,10"/>
 
                 <!-- Desenvolvedor -->
                 <Label Text="Desenvolvedor:"
@@ -20,22 +21,23 @@
                        HorizontalTextAlignment="Center"
                        FontFamily="Lexend-SemiBold"/>
                 <Label Text=" Robson Bassanezi Pasetto Aparecido"
-                       HorizontalTextAlignment="Center"/>
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,10"/>
 
                 <!-- Data do Desenvolvimento -->
                 <Label Text="Data do Desenvolvimento:"
                        TextColor="{StaticResource Primary}"
                        HorizontalTextAlignment="Center"
                        FontFamily="Lexend-SemiBold"/>
-                
+
                 <Label Text=" 02/11/2025"
-                       HorizontalTextAlignment="Center"/>
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,10"/>
 
                 <Button Text="Voltar" Clicked="Button_Clicked"
-                        Margin="5"/>
+                        Margin="5"
+                        TextColor="White" FontFamily="Lexend-Regular"/>
             </VerticalStackLayout>
-
-            
         </Frame>
     </VerticalStackLayout>
 </ContentPage>

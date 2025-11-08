@@ -9,6 +9,12 @@ public partial class Sobre : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-		App.Current.MainPage = new ContratacaoHospedagem();
+        try
+        {
+            Navigation.PopAsync(); // Volta à página anterior
+        } catch (Exception ex)
+        {
+            DisplayAlert("Ops", ex.Message, "OK");
+        }
     }
 }

@@ -19,11 +19,13 @@
 
                     <!-- Adultos -->
                     <Label Grid.Row="0" Grid.Column="0"
-                           Text="Adultos:"/>
+                           Text="Adultos:"
+                           FontFamily="Lexend-Regular"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
                            TextColor="{StaticResource Primary}"
                            Text="{Binding Value}"
+                           FontFamily="Lexend-Regular"
                            BindingContext="{x:Reference stp_adultos}"/>
 
                     <Stepper Grid.Row="0" Grid.Column="2"
@@ -33,11 +35,13 @@
 
                     <!-- Crianças -->
                     <Label Grid.Row="1" Grid.Column="0"
-                           Text="Crianças:"/>
+                           Text="Crianças:"
+                           FontFamily="Lexend-Regular"/>
 
                     <Label Grid.Row="1" Grid.Column="1"
                            TextColor="{StaticResource Primary}"
                            Text="{Binding Value}"
+                           FontFamily="Lexend-Regular"
                            BindingContext="{x:Reference stp_criancas}"/>
 
                     <Stepper Grid.Row="1" Grid.Column="2"
@@ -46,34 +50,43 @@
                              Increment="1"/>
                 </Grid>
 
-                <Label Text="Escolha Sua Suíte"/>
+                <Label Text="Escolha Sua Suíte" FontFamily="Lexend-Regular"/>
 
                 <Picker x:Name="pck_quarto"
-                        Title="Selecione sua acomodação"/>
+                        Title="Selecione sua acomodação"
+                        ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
                        Margin="10">
                     <VerticalStackLayout>
-                        <Label Text="Período da Estadia"/>
+                        <Label Text="Período da Estadia" TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold"/>
                         <!-- Check-in -->
                         <HorizontalStackLayout>
-                            <Label Text="Check-in:"/>
+                            <Label Text="Check-in:"
+                                   FontFamily="Lexend-Regular"
+                                   WidthRequest="90"/>
                             <DatePicker x:Name="dtpck_checkin"
-                                        Format="dd/MM/yyyy"/>
+                                        DateSelected="dtpck_checkin_DateSelected"
+                                        Format="dd/MM/yyyy"
+                                        BackgroundColor="{StaticResource Tertiary}"
+                                        FontFamily="Lexend-Regular"/>
                         </HorizontalStackLayout>
 
                         <!-- Check-out -->
                         <HorizontalStackLayout>
-                            <Label Text="Check-out:"/>
+                            <Label Text="Check-out:"
+                                   FontFamily="Lexend-Regular"
+                                   WidthRequest="90"/>
                             <DatePicker x:Name="dtpck_checkout"
-                                        Format="dd/MM/yyyy"/>
+                                        Format="dd/MM/yyyy"
+                                        BackgroundColor="{StaticResource Tertiary}"
+                                        FontFamily="Lexend-Regular"/>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar" Margin="5"/>
-                <Button Text="Sobre" Clicked="Button_Clicked"
-                        Margin="5"/>
+                <Button Text="Avançar" Margin="5" Clicked="Button_Clicked_1" TextColor="White" FontFamily="Lexend-Regular"/>
+                <Button Text="Sobre" Clicked="Button_Clicked" Margin="5" TextColor="White" FontFamily="Lexend-Regular"/>
 
             </VerticalStackLayout>
         </Frame>

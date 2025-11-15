@@ -6,45 +6,45 @@
              Background="{StaticResource Gray900}">
 
     <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
-        <Label Text="Suíte Super Luxo"
+        <Label Text="{Binding QuartoSelecionado.Descricao}"
                TextColor="{StaticResource Primary}"
                FontFamily="Lexend-Regular"
                FontSize="50"
                HorizontalTextAlignment="Center"/>
 
         <Frame Margin="10">
-            <HorizontalStackLayout Spacing="5">
+            <StackLayout Spacing="5" Orientation="Horizontal">
                 <!-- Adultos -->
-                <HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Adultos: " TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold"/>
-                    <Label Text="2" Margin="4,0,0,0"/>
+                    <Label Text="{Binding QntAdultos}" Margin="4,0,0,0"/>
                 </HorizontalStackLayout>
 
                 <!-- Crianças -->
-                <HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Crianças: " TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold"/>
-                    <Label Text="3" Margin="4,0,0,0"/>
+                    <Label Text="{Binding QntCriancas}" Margin="4,0,0,0"/>
                 </HorizontalStackLayout>
-            </HorizontalStackLayout>
+            </StackLayout>
         </Frame>
 
         <Frame Margin="10">
             <Grid ColumnDefinitions="*, *, *"
                   RowDefinitions="Auto, Auto">
-                <Label Grid.Row="0" Grid.Column="0" Text="Check-in" TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold"/>
-                <Label Grid.Row="0" Grid.Column="1" Text="Check-out" TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold"/>
-                <Label Grid.Row="0" Grid.Column="2" Text="Estadia" TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold"/>
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in" TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-out" TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia" TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold" HorizontalTextAlignment="Center"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text="17/05/2025"/>
-                <Label Grid.Row="1" Grid.Column="1" Text="20/05/2025"/>
-                <Label Grid.Row="1" Grid.Column="2" Text="3"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}" HorizontalTextAlignment="Center"/>
             </Grid>
         </Frame>
 
         <Frame Margin="10">
-            <HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                 <Label Text="Valor Total: " TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold"/>
-                <Label Text="R$ 300,00" Margin="4,0,0,0"/>
+                <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}" Margin="4,0,0,0"/>
             </HorizontalStackLayout>
         </Frame>
 

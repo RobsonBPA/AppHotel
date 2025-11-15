@@ -5,7 +5,7 @@
              Title="ContratacaoHospedagem"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource Gray900}">
-    <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10" Spacing="10">
         
         <Label Text="Cálculo da Diária"
                FontFamily="Lexend-Regular"
@@ -49,19 +49,23 @@
                              Minimum="0" Maximum="10" Value="0"
                              Increment="1"/>
                 </Grid>
+                
+                <Frame Padding="10" Margin="10">
+                    <VerticalStackLayout>
+                        <Label Text="Escolha Sua Suíte" FontFamily="Lexend-Regular"/>
 
-                <Label Text="Escolha Sua Suíte" FontFamily="Lexend-Regular"/>
-
-                <Picker x:Name="pck_quarto"
-                        Title="Selecione sua acomodação"
-                        ItemDisplayBinding="{Binding Descricao}"/>
-
+                        <Picker x:Name="pck_quarto"
+                                Title="Selecione sua acomodação"
+                                ItemDisplayBinding="{Binding Descricao}"/>
+                    </VerticalStackLayout>
+                </Frame>
+                
                 <Frame Padding="10"
                        Margin="10">
-                    <VerticalStackLayout>
+                    <VerticalStackLayout Spacing="10">
                         <Label Text="Período da Estadia" TextColor="{StaticResource Primary}" FontFamily="Lexend-Bold"/>
                         <!-- Check-in -->
-                        <HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-in:"
                                    FontFamily="Lexend-Regular"
                                    WidthRequest="90"/>
@@ -73,7 +77,7 @@
                         </HorizontalStackLayout>
 
                         <!-- Check-out -->
-                        <HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-out:"
                                    FontFamily="Lexend-Regular"
                                    WidthRequest="90"/>
